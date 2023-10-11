@@ -33,7 +33,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "react-scripts build",
+    "build": "craco build",
     "test": "jest",
     "test:cov": "jest --coverage",
     "eject": "react-scripts eject"
