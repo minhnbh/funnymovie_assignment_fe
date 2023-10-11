@@ -1,8 +1,14 @@
 import React from "react";
-import { Layout, Button } from "antd";
-import { AppName, HeaderLeft, HeaderRight, HeaderWrapper } from "./styles";
+import { Layout, Button, Menu } from "antd";
+import {
+  AppName,
+  HeaderLeft,
+  HeaderRight,
+  HeaderWrapper,
+  MobileHeaderRight,
+} from "./styles";
 import { HomeOutlined } from "@ant-design/icons";
-import { Link } from "react-router-dom";
+import { Link, redirect } from "react-router-dom";
 import {
   getAuthUser,
   removeAccessToken,
@@ -34,6 +40,27 @@ const Header: React.FC = () => {
             Logout
           </Button>
         </HeaderRight>
+        {/* <MobileHeaderRight>
+          <Menu
+            items={[
+              {
+                key: "share",
+                title: "Share a movie",
+              },
+              {
+                key: "logout",
+                title: "Logout",
+              },
+            ]}
+            onClick={(e) => {
+              if (e.key === "share") {
+                redirect("/share");
+              } else if (e.key === "logout") {
+                onSignOut();
+              }
+            }}
+          />
+        </MobileHeaderRight> */}
       </HeaderWrapper>
     </Layout.Header>
   );

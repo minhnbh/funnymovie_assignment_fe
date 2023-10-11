@@ -5,7 +5,7 @@ import { Layout } from "antd";
 
 const MainLayout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
-    <Layout>
+    <Layout style={{ width: "100vw", overflowX: 'hidden' }}>
       <Header />
       {children}
       <Outlet />

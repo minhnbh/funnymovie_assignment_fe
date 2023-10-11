@@ -1,3 +1,4 @@
+import { devices } from "@app/constants/sizes";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -16,13 +17,27 @@ export const HeaderLeft = styled(Link)`
 `;
 
 export const AppName = styled.div`
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 700;
+  @media ${devices.desktop} {
+    font-size: 32px;
+    font-weight: 700;
+  }
 `;
 
 export const HeaderRight = styled.div`
+  display: none;
+  @media ${devices.desktop} {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+`;
+
+export const MobileHeaderRight = styled.div`
   margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: 24px;
+  @media ${devices.desktop} {
+    display: none;
+  }
 `;
