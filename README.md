@@ -10,6 +10,7 @@ In this assignment I use:
 + ReactJS: Front-end development
 + ExpressJS: Back-end development
 + MongoDB: Database
++ Cloud: Vercel (FE) - AWS (BE)
 
 # Installation & Configuration
 
