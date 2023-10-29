@@ -10,7 +10,7 @@ const Share: React.FC = () => {
   const onSubmit = async () => {
     try {
       setLoading(true);
-      const { data } = await ShareServices.share(value);
+      await ShareServices.share(value);
       notification.success({
         message: "Share successfully",
       });
